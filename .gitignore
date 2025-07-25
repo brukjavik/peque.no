@@ -36,3 +36,18 @@ msbuild.wrn
 # Visual Studio 2015
 .vs/
 *.sln
+
+# Node modules em qualquer lugar
+node_modules/
+
+# Build do Angular em qualquer lugar
+dist/
+out-tsc/
+.angular/
+
+# Arquivos temporários do Angular
+*.log
+
+# IDEs comuns para frontend
+.vscode/
+.idea/

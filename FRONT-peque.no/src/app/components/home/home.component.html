@@ -1,0 +1,53 @@
+<div class="fullscreen-center">
+  <div class="global-card">
+    <form *ngIf="!shortenedUrl" (ngSubmit)="shortenUrl()" #urlForm="ngForm">
+      <div class="input-group mb-3">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Insira a URL a ser encurtada"
+          [(ngModel)]="urlInput"
+          name="urlInput"
+          required
+        />
+        <button type="submit" class="btn btn-primary btn-short">
+          Encurtar
+        </button>
+      </div>
+    </form>
+    <div
+      *ngIf="shortenedUrl"
+      class="input-group alert alert-success text-center"
+    >
+      <span class="title-url">URL encurtada com sucesso!</span>
+      <div class="link-exhibit">
+        <a [href]="shortenedUrl" target="_blank">{{ shortenedUrl }}</a>
+        <button
+          class="btn btn-primary"
+          (click)="copyToClipboard()"
+          style="width: 120px"
+        >
+          {{ copied ? "Copiado!" : "Copiar URL" }}
+        </button>
+      </div>
+      <button class="btn btn-secondary" (click)="retry()">
+        Tentar novamente
+      </button>
+    </div>
+    <div
+      class="alert alert-danger text-center error-box"
+      [class.visible]="!!errorMessage"
+    >
+      {{ errorMessage || "‎" }}
+    </div>
+  </div>
+  <div class="footer">
+    <p>
+      Made with
+      <ng-icon name="bootstrapHeartFill" class="icon-users"></ng-icon> by
+      <a href="https://www.linkedin.com/in/brukjavik/" target="_blank"
+        >Bruno Costa</a
+      >
+    </p>
+  </div>
+</div>
