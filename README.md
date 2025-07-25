@@ -1,6 +1,6 @@
 # 🔗 URL Shortener API + Frontend (Angular)
 
-This is a simple REST API project to shorten long URLs, built with ASP.NET Core and SQL Server. It generates fixed-length short codes using a sequential base-52 counter (lowercase + uppercase letters).
+This is a full-stack URL shortening project with a REST API backend built in ASP.NET Core + SQL Server, and a frontend built with Angular 19.
 
 ---
 
