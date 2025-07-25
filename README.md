@@ -52,9 +52,15 @@ Submits a URL and returns a unique shortened code.
 
 ## ✅ Requirements
 
+### Backend
 - .NET 8.0 or later (https://dotnet.microsoft.com/)  
 - SQL Server  
-- Tool like Postman or cURL for testing  
+- Tool like Postman or cURL for API testing  
+
+### Frontend
+- Node.js (version 16 or later recommended) (https://nodejs.org/)  
+- npm (comes with Node.js)  
+- Angular CLI (install with `npm install -g @angular/cli`)  
 
 ---
 
