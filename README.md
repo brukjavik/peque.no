@@ -1,4 +1,4 @@
-# 🔗 URL Shortener API (.NET + SQL Server)
+# 🔗 URL Shortener API + Frontend (Angular)
 
 This is a simple REST API project to shorten long URLs, built with ASP.NET Core and SQL Server. It generates fixed-length short codes using a sequential base-52 counter (lowercase + uppercase letters).
 
@@ -6,11 +6,25 @@ This is a simple REST API project to shorten long URLs, built with ASP.NET Core 
 
 ## 🚀 Features
 
+### Backend (.NET Core + SQL Server)
 - ✅ Automatically shortens long URLs  
 - ✅ Fixed 5-character short codes  
 - ✅ Sequential generation (not random)  
 - ✅ Saves data in SQL Server  
-- ✅ Tracks creation and last access timestamps  
+- ✅ Tracks creation and last access timestamps
+
+### Frontend (Angular)
+- ✅ Responsive web interface to shorten URLs  
+- ✅ Modern Angular standalone components  
+- ✅ Frontend located inside the `front-peque.no` folder for organization
+
+---
+
+## 📁 Repository Structure
+
+- /peque.no
+  - Peque.no/ (backend .NET code)
+  - FRONT-peque.no/ (Angular frontend project)
 
 ---
 
@@ -46,10 +60,14 @@ Submits a URL and returns a unique shortened code.
 
 ## ⚙️ Setup
 
-1. Clone the repository:
+### Backend
 
+1. Clone the repository:
+    
+    ```
     git clone https://github.com/brukjavik/peque.no.git
     cd Peque.no
+    ```
 
 2. Configure the connection string in appsettings.json:
 
@@ -61,7 +79,29 @@ Submits a URL and returns a unique shortened code.
 
 3. Run the project:
 
-    dotnet run
+    ```dotnet run```
+
+### Frontend
+
+1. Navigate to the frontend folder:
+
+    ```bash
+    cd front-peque.no
+    ```
+
+2. Install dependencies:
+
+    ```bash
+    npm install
+    ```
+
+3. Start the Angular development server:
+
+    ```bash
+    ng serve
+    ```
+
+4. The frontend will be available at `http://localhost:4200`
 
 ---
 
@@ -75,7 +115,7 @@ Submits a URL and returns a unique shortened code.
 
 ## 👨‍💻 Author
 
-Developed by [Bruno Costa](https://github.com/brukjavik) with ❤️ using .NET.
+Developed by [Bruno Costa](https://github.com/brukjavik) with ❤️.
 
 ---
 
