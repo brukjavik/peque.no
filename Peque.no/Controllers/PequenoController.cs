@@ -15,6 +15,13 @@ public class PequenoController : ControllerBase
     }
 
     [HttpGet]
+    [Route("health")]
+    public IActionResult Health()
+    {
+        return Ok("Pequeno is running!");
+    }
+
+    [HttpGet]
     [Route("get")]
     public IActionResult Get([FromQuery] string word)
     {

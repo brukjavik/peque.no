@@ -1,0 +1,19 @@
+services:
+  backend:
+    build: ./Peque.no
+    ports:
+      - "3000:8080"
+    networks:
+      - app-network
+
+  frontend:
+    build: ./FRONT-peque.no
+    ports:
+      - "4200:80"
+    depends_on:
+      - backend
+    networks:
+      - app-network
+
+networks:
+  app-network:
